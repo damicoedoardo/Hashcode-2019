@@ -5,8 +5,9 @@ from one_hot import one_hot_encoded
 # matrix: a csr matrix containing onehot encodings
 def compute(matrix):
     first = matrix*matrix.transpose()
+    ones = np.ones((matrix.shape[0], matrix.shape[1]), dtype=np.int8)
+    a = 1
 
-
-
-l,m = one_hot_encoded('dataset/a_example.txt')
-print(m.toarray())
+m,l = one_hot_encoded('dataset/b_lovely_landscapes.txt')
+compute(m)
+# print(l.toarray())
