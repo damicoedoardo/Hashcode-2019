@@ -14,7 +14,7 @@ def one_hot_encoded(filepath, verbose=False):
   if verbose:
     print(X)
 
-  mlb = MultiLabelBinarizer()
+  mlb = MultiLabelBinarizer(sparse_output=True)
   one_hot = mlb.fit_transform(X)
 
   if verbose:
