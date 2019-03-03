@@ -16,7 +16,7 @@ def one_hot_encoded(filepath, verbose=False):
   
   orientations = np.array(orientations)
 
-  mlb = MultiLabelBinarizer(sparse_output=True)
+  mlb = MultiLabelBinarizer(sparse_output=False)
   one_hot = mlb.fit_transform(X)
 
   if verbose:
@@ -28,7 +28,7 @@ def one_hot_encoded(filepath, verbose=False):
 
 
 if __name__ == "__main__":
-    a,b,c = one_hot_encoded('dataset/a_example.txt')
+    a,b,c = one_hot_encoded('dataset/b_lovely_landscapes.txt')
     print(a)
     print(b)
     print(c)
